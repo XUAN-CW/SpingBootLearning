@@ -1,0 +1,8 @@
+#普通数据的配置
+name: zhangsan
+
+person:
+  name: tom
+  age: 19
+  addr: shanghai
+
