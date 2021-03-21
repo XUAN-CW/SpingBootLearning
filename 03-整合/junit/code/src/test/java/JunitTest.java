@@ -1,0 +1,21 @@
+import com.xuan.Application;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+/**
+ * @author XUAN
+ * @date 2021/3/21 - 13:56
+ * @references
+ * @purpose
+ * @errors
+ */
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = Application.class)
+public class JunitTest {
+    @Test
+    public void test(){
+        System.out.println("---------------\njunit test\n---------------\n");
+    }
+}
