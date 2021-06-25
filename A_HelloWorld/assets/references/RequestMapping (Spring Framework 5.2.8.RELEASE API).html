@@ -1,0 +1,483 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> <html style lang=en><!--
+ Page saved with SingleFile 
+ url: https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/web/bind/annotation/RequestMapping.html 
+ saved date: Fri Jun 25 2021 18:25:01 GMT+0800 (中国标准时间)
+--><meta charset=utf-8>
+<title>RequestMapping (Spring Framework 5.2.8.RELEASE API)</title>
+<meta name=date content=2020-07-21>
+<style>body{background-color:#fff;color:#353833;font-family:dejavu sans,Arial,Helvetica,sans-serif;font-size:14px;margin:0}a:link,a:visited{text-decoration:none;color:#4a6782}a:hover,a:focus{text-decoration:none;color:#bb7a2a}a:active{text-decoration:none;color:#4a6782}a[name]{color:#353833}a[name]:hover{text-decoration:none;color:#353833}pre{font-family:dejavu sans mono,monospace;font-size:14px}h2{font-size:18px}h3{font-size:16px;font-style:italic}h4{font-size:13px}ul{list-style-type:disc}code{font-family:dejavu sans mono,monospace;font-size:14px;padding-top:4px;margin-top:8px;line-height:1.4em}.aboutLanguage{float:right;padding:0 21px;font-size:11px;z-index:200;margin-top:-9px}.topNav{background-color:#4d7a97;color:#fff;float:left;padding:0;width:100%;clear:right;height:2.8em;padding-top:10px;overflow:hidden;font-size:12px}.bottomNav{margin-top:10px;background-color:#4d7a97;color:#fff;float:left;padding:0;width:100%;clear:right;height:2.8em;padding-top:10px;overflow:hidden;font-size:12px}.subNav{background-color:#dee3e9;float:left;width:100%;overflow:hidden;font-size:12px}.subNav div{clear:left;float:left;padding:0 0 5px 6px;text-transform:uppercase}ul.navList,ul.subNavList{float:left;margin:0 25px 0 0;padding:0}ul.navList li{list-style:none;float:left;padding:5px 6px;text-transform:uppercase}ul.subNavList li{list-style:none;float:left}.topNav a:link,.topNav a:active,.topNav a:visited,.bottomNav a:link,.bottomNav a:active,.bottomNav a:visited{color:#fff;text-decoration:none;text-transform:uppercase}.topNav a:hover,.bottomNav a:hover{text-decoration:none;color:#bb7a2a;text-transform:uppercase}.navBarCell1Rev{background-color:#f8981d;color:#253441;margin:auto 5px}.skipNav{position:absolute;top:auto;left:-9999px;overflow:hidden}.header{clear:both;margin:0 20px;padding:5px 0 0}.title{color:#2c4557;margin:10px 0}.subTitle{margin:5px 0 0}div.details ul.blockList ul.blockList ul.blockList li.blockList h4,div.details ul.blockList ul.blockList ul.blockListLast li.blockList h4{background-color:#dee3e9;border:1px solid #d0d9e0;margin:0 0 6px -8px;padding:7px 5px}ul.blockList ul.blockList li.blockList h3{padding:0;margin:15px 0}.contentContainer{clear:both;padding:10px 20px;position:relative}.contentContainer .description dl dt,.contentContainer .details dl dt{font-size:12px;font-weight:700;margin:10px 0 0;color:#4e4e4e}.contentContainer .description dl dd,.contentContainer .details dl dd{margin:5px 0 10px 0;font-size:14px;font-family:dejavu sans mono,monospace}ul.blockList,ul.blockListLast{margin:10px 0;padding:0}ul.blockList li.blockList{list-style:none;margin-bottom:15px;line-height:1.4}ul.blockList ul.blockList li.blockList{padding:0 20px 5px 10px;border:1px solid #ededed;background-color:#f8f8f8}ul.blockList ul.blockList ul.blockList li.blockList,ul.blockList ul.blockList ul.blockListLast li.blockList{padding:0 0 5px 8px;background-color:#fff;border:none}.memberSummary{width:100%;border-left:1px solid #eee;border-right:1px solid #eee;border-bottom:1px solid #eee}.memberSummary{padding:0}.memberSummary caption{position:relative;text-align:left;background-repeat:no-repeat;color:#253441;font-weight:700;clear:none;overflow:hidden;padding:0;padding-top:10px;padding-left:1px;margin:0;white-space:pre}.memberSummary caption span{white-space:nowrap;padding-top:5px;padding-left:12px;padding-right:12px;padding-bottom:7px;display:inline-block;float:left;background-color:#f8981d;border:none;height:16px}.memberSummary td{text-align:left;padding:0 0 12px 10px;width:100%}th.colFirst,th.colLast,td.colFirst,td.colLast{vertical-align:top;padding-right:0;padding-top:8px;padding-bottom:3px}th.colFirst,th.colLast{background:#dee3e9;text-align:left;padding:8px 3px 3px 7px}td.colFirst,th.colFirst{white-space:nowrap;font-size:13px}td.colLast,th.colLast{font-size:13px}.memberSummary td.colFirst,.memberSummary th.colFirst{width:25%;vertical-align:top}td.colOne a:link,td.colOne a:active,td.colOne a:visited,td.colOne a:hover,td.colFirst a:link,td.colFirst a:active,td.colFirst a:visited,td.colFirst a:hover,td.colLast a:link,td.colLast a:active,td.colLast a:visited,td.colLast a:hover,.constantValuesContainer td a:link,.constantValuesContainer td a:active,.constantValuesContainer td a:visited,.constantValuesContainer td a:hover{font-weight:700}.altColor{background-color:#fff}.rowColor{background-color:#eeeeef}.description pre{margin-top:0}div.block{font-size:14px;font-family:'dejavu serif',Georgia,times new roman,Times,serif}td.colLast div{padding-top:0}td.colLast a{padding-bottom:3px}.block{display:block;margin:3px 10px 2px 0;color:#474747}.memberNameLabel,.memberNameLink,.seeLabel,.simpleTagLabel,.typeNameLink{font-weight:700}pre.code{background-color:#f8f8f8;border:1px solid #ccc;border-radius:3px 3px 3px 3px;overflow:auto;padding:10px;margin:4px 20px 2px 0}</style>
+<link type=image/x-icon rel="shortcut icon" href="data:image/vnd.microsoft.icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2JpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0idXVpZDpFRTE2MTIxNzQ3RUVERTExQkM5RkE3MDBBNkY0RDhDMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpGMUMxRDM5QjBGNzAxMUUzODE3RkU5MEMxMzBDODE2MCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpGMUMxRDM5QTBGNzAxMUUzODE3RkU5MEMxMzBDODE2MCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MkRDNDcwNzY0NDIwNjgxMTgyMkFFRkMyQjhBOEY0MEIiIHN0UmVmOmRvY3VtZW50SUQ9InV1aWQ6RUUxNjEyMTc0N0VFREUxMUJDOUZBNzAwQTZGNEQ4QzEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4SMlYtAAACRUlEQVR42oyTXUiTYRTH/+9a9jGTZvMjZZuVzhGrnEmNGmkZVFBESFdhgpYX4VUlUSnRVRfSRVIXQkJB1EWRUFBUOC1mRSNyi+xDg2hbCzc/2ObXyK3/8/a+gZXmgR/PeT7+D+c55zlSzfUy/GFrSS3ZRQpIggyQDnKFxMhe8oIMaYTi2mGPGLSkhbwlJ4iNpJNMsolcIF6yjlwkx4ROUiKQyG1Shf/bhC4tY8lYIhqkb9Ioi2fmKYYQH995CQs02nxOneICE2mejzg3w4ymPe1YY7DBlucQS5Xi3TVk0VzC/OWrsa1wPyqtB6HVLJTXNpoq4A24nVolozPMqC+C3ViO4pwSmPQWLFusn7GfSiVRmLVeuFZxwSp1Y4VuJeqd5ym0zxpNOP4NBl0uDOl5YmrQKKWSrXbL2TnFE4k4fMEeSJJGfUpSXBBQDxTnlM4qHhoL4fLTUyg1VvyKJCaqiC/igpfqocFY4C/hdPIHXB/voPn+IWy3VEG/NEtef+3vEoNL5OAqqRazjt42HNl6Tg5xMOpHb8CN7v67GB2P8HlNKDPvkMWxyRE8fHdDuLfUn3iP7CvK3sC3peH9d8/vCES2qzc3wpxpleeReAit3SfxdfjTB9E3WuVcnSXb/ur07rYCib+65UkDopPDOFBSL+dlfCqGN/5n8AbdeP75ARLTU0lqGtgLKa3STOGBsK+ObqdcZyThH+lHa1fjv/I5So5S06l2oBqqi4PjUd9NR1/II2pZrnxzkegI8ZHHpJ3iiKr7KcAAO/GrgtdfsmsAAAAASUVORK5CYII="><style>.sf-hidden{display:none!important}</style><link rel=canonical href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/web/bind/annotation/RequestMapping.html><body>
+<noscript class=sf-hidden>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<div class=topNav><a name=navbar.top>
+</a>
+<div class=skipNav><a href=#skip.navbar.top title="Skip navigation links">Skip navigation links</a></div>
+<a name=navbar.top.firstrow>
+</a>
+<ul class=navList title=Navigation>
+<li><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/overview-summary.html>Overview</a></li>
+<li><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/web/bind/annotation/package-summary.html>Package</a></li>
+<li class=navBarCell1Rev>Class</li>
+<li><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/web/bind/annotation/class-use/RequestMapping.html>Use</a></li>
+<li><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/web/bind/annotation/package-tree.html>Tree</a></li>
+<li><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/deprecated-list.html>Deprecated</a></li>
+<li><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/index-files/index-1.html>Index</a></li>
+<li><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/help-doc.html>Help</a></li>
+</ul>
+<div class=aboutLanguage>Spring Framework</div>
+</div>
+<div class=subNav>
+<ul class=navList>
+<li><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/web/bind/annotation/RequestHeader.html title="annotation in org.springframework.web.bind.annotation"><span class=typeNameLink>Prev&nbsp;Class</span></a></li>
+<li><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/web/bind/annotation/RequestMethod.html title="enum in org.springframework.web.bind.annotation"><span class=typeNameLink>Next&nbsp;Class</span></a></li>
+</ul>
+<ul class=navList>
+<li><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/index.html?org/springframework/web/bind/annotation/RequestMapping.html target=_top>Frames</a></li>
+<li><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/web/bind/annotation/RequestMapping.html target=_top>No&nbsp;Frames</a></li>
+</ul>
+<ul class=navList id=allclasses_navbar_top style=display:block>
+<li><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/allclasses-noframe.html>All&nbsp;Classes</a></li>
+</ul>
+<div>
+</div>
+<div>
+<ul class=subNavList>
+<li>Summary:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Required&nbsp;|&nbsp;</li>
+<li><a href=#annotation.type.optional.element.summary>Optional</a></li>
+</ul>
+<ul class=subNavList>
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href=#annotation.type.element.detail>Element</a></li>
+</ul>
+</div>
+<a name=skip.navbar.top>
+</a></div>
+<div class=header>
+<div class=subTitle>org.springframework.web.bind.annotation</div>
+<h2 title="Annotation Type RequestMapping" class=title>Annotation Type RequestMapping</h2>
+</div>
+<div class=contentContainer>
+<div class=description>
+<ul class=blockList>
+<li class=blockList>
+<hr>
+<br>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html?is-external=true" title="class or interface in java.lang.annotation">@Target</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html?is-external=true#value--" title="class or interface in java.lang.annotation">value</a>={<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/ElementType.html?is-external=true#TYPE" title="class or interface in java.lang.annotation">TYPE</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/ElementType.html?is-external=true#METHOD" title="class or interface in java.lang.annotation">METHOD</a>})
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Retention.html?is-external=true" title="class or interface in java.lang.annotation">@Retention</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Retention.html?is-external=true#value--" title="class or interface in java.lang.annotation">value</a>=<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html?is-external=true#RUNTIME" title="class or interface in java.lang.annotation">RUNTIME</a>)
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Documented.html?is-external=true" title="class or interface in java.lang.annotation">@Documented</a>
+public @interface <span class=memberNameLabel>RequestMapping</span></pre>
+<div class=block>Annotation for mapping web requests onto methods in request-handling classes
+with flexible method signatures.
+<p>Both Spring MVC and Spring WebFlux support this annotation through a
+<code>RequestMappingHandlerMapping</code> and <code>RequestMappingHandlerAdapter</code>
+in their respective modules and package structure. For the exact list of
+supported handler method arguments and return types in each, please use the
+reference documentation links below:
+<ul>
+<li>Spring MVC
+<a href=https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html#mvc-ann-arguments>Method Arguments</a>
+and
+<a href=https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html#mvc-ann-return-types>Return Values</a>
+</li>
+<li>Spring WebFlux
+<a href=https://docs.spring.io/spring/docs/current/spring-framework-reference/web-reactive.html#webflux-ann-arguments>Method Arguments</a>
+and
+<a href=https://docs.spring.io/spring/docs/current/spring-framework-reference/web-reactive.html#webflux-ann-return-types>Return Values</a>
+</li>
+</ul>
+<p><strong>Note:</strong> This annotation can be used both at the class and
+at the method level. In most cases, at the method level applications will
+prefer to use one of the HTTP method specific variants
+<a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/web/bind/annotation/GetMapping.html title="annotation in org.springframework.web.bind.annotation"><code>@GetMapping</code></a>, <a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/web/bind/annotation/PostMapping.html title="annotation in org.springframework.web.bind.annotation"><code>@PostMapping</code></a>,
+<a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/web/bind/annotation/PutMapping.html title="annotation in org.springframework.web.bind.annotation"><code>@PutMapping</code></a>, <a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/web/bind/annotation/DeleteMapping.html title="annotation in org.springframework.web.bind.annotation"><code>@DeleteMapping</code></a>, or
+<a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/web/bind/annotation/PatchMapping.html title="annotation in org.springframework.web.bind.annotation"><code>@PatchMapping</code></a>.</p>
+<p><b>NOTE:</b> When using controller interfaces (e.g. for AOP proxying),
+make sure to consistently put <i>all</i> your mapping annotations - such as
+<code>@RequestMapping</code> and <code>@SessionAttributes</code> - on
+the controller <i>interface</i> rather than on the implementation class.</p></div>
+<dl>
+<dt><span class=simpleTagLabel>Since:</span></dt>
+<dd>2.5</dd>
+<dt><span class=simpleTagLabel>Author:</span></dt>
+<dd>Juergen Hoeller, Arjen Poutsma, Sam Brannen</dd>
+<dt><span class=seeLabel>See Also:</span></dt>
+<dd><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/web/bind/annotation/GetMapping.html title="annotation in org.springframework.web.bind.annotation"><code>GetMapping</code></a>,
+<a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/web/bind/annotation/PostMapping.html title="annotation in org.springframework.web.bind.annotation"><code>PostMapping</code></a>,
+<a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/web/bind/annotation/PutMapping.html title="annotation in org.springframework.web.bind.annotation"><code>PutMapping</code></a>,
+<a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/web/bind/annotation/DeleteMapping.html title="annotation in org.springframework.web.bind.annotation"><code>DeleteMapping</code></a>,
+<a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/web/bind/annotation/PatchMapping.html title="annotation in org.springframework.web.bind.annotation"><code>PatchMapping</code></a>,
+<a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.html title="class in org.springframework.web.servlet.mvc.method.annotation"><code>RequestMappingHandlerAdapter</code></a>,
+<a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/web/reactive/result/method/annotation/RequestMappingHandlerAdapter.html title="class in org.springframework.web.reactive.result.method.annotation"><code>RequestMappingHandlerAdapter</code></a></dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class=summary>
+<ul class=blockList>
+<li class=blockList>
+<ul class=blockList>
+<li class=blockList><a name=annotation.type.optional.element.summary>
+</a>
+<h3>Optional Element Summary</h3>
+<table class=memberSummary summary="Optional Element Summary table, listing optional elements, and an explanation" cellspacing=0 cellpadding=3 border=0>
+<caption><span>Optional Elements</span><span class="tabEnd sf-hidden">&nbsp;</span></caption>
+<tbody><tr>
+<th class=colFirst scope=col>Modifier and Type</th>
+<th class=colLast scope=col>Optional Element and Description</th>
+</tr>
+<tr class=altColor>
+<td class=colFirst><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
+<td class=colLast><code><span class=memberNameLink><a href=#consumes-->consumes</a></span></code>
+<div class=block>Narrows the primary mapping by media types that can be consumed by the
+mapped handler.</div>
+</td>
+</tr>
+<tr class=rowColor>
+<td class=colFirst><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
+<td class=colLast><code><span class=memberNameLink><a href=#headers-->headers</a></span></code>
+<div class=block>The headers of the mapped request, narrowing the primary mapping.</div>
+</td>
+</tr>
+<tr class=altColor>
+<td class=colFirst><code><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/web/bind/annotation/RequestMethod.html title="enum in org.springframework.web.bind.annotation">RequestMethod</a>[]</code></td>
+<td class=colLast><code><span class=memberNameLink><a href=#method-->method</a></span></code>
+<div class=block>The HTTP request methods to map to, narrowing the primary mapping:
+GET, POST, HEAD, OPTIONS, PUT, PATCH, DELETE, TRACE.</div>
+</td>
+</tr>
+<tr class=rowColor>
+<td class=colFirst><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class=colLast><code><span class=memberNameLink><a href=#name-->name</a></span></code>
+<div class=block>Assign a name to this mapping.</div>
+</td>
+</tr>
+<tr class=altColor>
+<td class=colFirst><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
+<td class=colLast><code><span class=memberNameLink><a href=#params-->params</a></span></code>
+<div class=block>The parameters of the mapped request, narrowing the primary mapping.</div>
+</td>
+</tr>
+<tr class=rowColor>
+<td class=colFirst><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
+<td class=colLast><code><span class=memberNameLink><a href=#path-->path</a></span></code>
+<div class=block>The path mapping URIs (e.g.</div>
+</td>
+</tr>
+<tr class=altColor>
+<td class=colFirst><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
+<td class=colLast><code><span class=memberNameLink><a href=#produces-->produces</a></span></code>
+<div class=block>Narrows the primary mapping by media types that can be produced by the
+mapped handler.</div>
+</td>
+</tr>
+<tr class=rowColor>
+<td class=colFirst><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
+<td class=colLast><code><span class=memberNameLink><a href=#value-->value</a></span></code>
+<div class=block>The primary mapping expressed by this annotation.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class=details>
+<ul class=blockList>
+<li class=blockList>
+<ul class=blockList>
+<li class=blockList><a name=annotation.type.element.detail>
+</a>
+<h3>Element Detail</h3>
+<a name=name-->
+</a>
+<ul class=blockList>
+<li class=blockList>
+<h4>name</h4>
+<pre>public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name</pre>
+<div class=block>Assign a name to this mapping.
+<p><b>Supported at the type level as well as at the method level!</b>
+When used on both levels, a combined name is derived by concatenation
+with "#" as separator.</p></div>
+<dl>
+<dt><span class=seeLabel>See Also:</span></dt>
+<dd><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/web/servlet/mvc/method/annotation/MvcUriComponentsBuilder.html title="class in org.springframework.web.servlet.mvc.method.annotation"><code>MvcUriComponentsBuilder</code></a>,
+<a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/web/servlet/handler/HandlerMethodMappingNamingStrategy.html title="interface in org.springframework.web.servlet.handler"><code>HandlerMethodMappingNamingStrategy</code></a></dd>
+</dl>
+<dl>
+<dt>Default:</dt>
+<dd>""</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+<ul class=blockList>
+<li class=blockList><a name=value-->
+</a>
+<ul class=blockList>
+<li class=blockList>
+<h4>value</h4>
+<pre><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/core/annotation/AliasFor.html title="annotation in org.springframework.core.annotation">@AliasFor</a>(<a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/core/annotation/AliasFor.html#value-->value</a>="path")
+public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;value</pre>
+<div class=block>The primary mapping expressed by this annotation.
+<p>This is an alias for <a href=#path--><code>path()</code></a>. For example,
+<code>@RequestMapping("/foo")</code> is equivalent to
+<code>@RequestMapping(path="/foo")</code>.
+<p><b>Supported at the type level as well as at the method level!</b>
+When used at the type level, all method-level mappings inherit
+this primary mapping, narrowing it for a specific handler method.
+<p><strong>NOTE</strong>: A handler method that is not mapped to any path
+explicitly is effectively mapped to an empty path.</p></div>
+<dl>
+<dt>Default:</dt>
+<dd>{}</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+<ul class=blockList>
+<li class=blockList><a name=path-->
+</a>
+<ul class=blockList>
+<li class=blockList>
+<h4>path</h4>
+<pre><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/core/annotation/AliasFor.html title="annotation in org.springframework.core.annotation">@AliasFor</a>(<a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/core/annotation/AliasFor.html#value-->value</a>="value")
+public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;path</pre>
+<div class=block>The path mapping URIs (e.g. <code>"/profile"</code>).
+<p>Ant-style path patterns are also supported (e.g. <code>"/profile/**"</code>).
+At the method level, relative paths (e.g. <code>"edit"</code>) are supported
+within the primary mapping expressed at the type level.
+Path mapping URIs may contain placeholders (e.g. <code>"/${profile_path}"</code>).
+<p><b>Supported at the type level as well as at the method level!</b>
+When used at the type level, all method-level mappings inherit
+this primary mapping, narrowing it for a specific handler method.
+<p><strong>NOTE</strong>: A handler method that is not mapped to any path
+explicitly is effectively mapped to an empty path.</p></div>
+<dl>
+<dt><span class=simpleTagLabel>Since:</span></dt>
+<dd>4.2</dd>
+</dl>
+<dl>
+<dt>Default:</dt>
+<dd>{}</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+<ul class=blockList>
+<li class=blockList><a name=method-->
+</a>
+<ul class=blockList>
+<li class=blockList>
+<h4>method</h4>
+<pre>public abstract&nbsp;<a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/web/bind/annotation/RequestMethod.html title="enum in org.springframework.web.bind.annotation">RequestMethod</a>[]&nbsp;method</pre>
+<div class=block>The HTTP request methods to map to, narrowing the primary mapping:
+GET, POST, HEAD, OPTIONS, PUT, PATCH, DELETE, TRACE.
+<p><b>Supported at the type level as well as at the method level!</b>
+When used at the type level, all method-level mappings inherit
+this HTTP method restriction (i.e. the type-level restriction
+gets checked before the handler method is even resolved).</p></div>
+<dl>
+<dt>Default:</dt>
+<dd>{}</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+<ul class=blockList>
+<li class=blockList><a name=params-->
+</a>
+<ul class=blockList>
+<li class=blockList>
+<h4>params</h4>
+<pre>public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;params</pre>
+<div class=block>The parameters of the mapped request, narrowing the primary mapping.
+<p>Same format for any environment: a sequence of "myParam=myValue" style
+expressions, with a request only mapped if each such parameter is found
+to have the given value. Expressions can be negated by using the "!=" operator,
+as in "myParam!=myValue". "myParam" style expressions are also supported,
+with such parameters having to be present in the request (allowed to have
+any value). Finally, "!myParam" style expressions indicate that the
+specified parameter is <i>not</i> supposed to be present in the request.
+<p><b>Supported at the type level as well as at the method level!</b>
+When used at the type level, all method-level mappings inherit
+this parameter restriction (i.e. the type-level restriction
+gets checked before the handler method is even resolved).
+<p>Parameter mappings are considered as restrictions that are enforced at
+the type level. The primary path mapping (i.e. the specified URI value)
+still has to uniquely identify the target handler, with parameter mappings
+simply expressing preconditions for invoking the handler.</p></div>
+<dl>
+<dt>Default:</dt>
+<dd>{}</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+<ul class=blockList>
+<li class=blockList><a name=headers-->
+</a>
+<ul class=blockList>
+<li class=blockList>
+<h4>headers</h4>
+<pre>public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;headers</pre>
+<div class=block>The headers of the mapped request, narrowing the primary mapping.
+<p>Same format for any environment: a sequence of "My-Header=myValue" style
+expressions, with a request only mapped if each such header is found
+to have the given value. Expressions can be negated by using the "!=" operator,
+as in "My-Header!=myValue". "My-Header" style expressions are also supported,
+with such headers having to be present in the request (allowed to have
+any value). Finally, "!My-Header" style expressions indicate that the
+specified header is <i>not</i> supposed to be present in the request.
+<p>Also supports media type wildcards (*), for headers such as Accept
+and Content-Type. For instance,
+<pre class=code> @RequestMapping(value = "/something", headers = "content-type=text/*")
+ </pre>
+will match requests with a Content-Type of "text/html", "text/plain", etc.
+<p><b>Supported at the type level as well as at the method level!</b>
+When used at the type level, all method-level mappings inherit
+this header restriction (i.e. the type-level restriction
+gets checked before the handler method is even resolved).</p></div>
+<dl>
+<dt><span class=seeLabel>See Also:</span></dt>
+<dd><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/http/MediaType.html title="class in org.springframework.http"><code>MediaType</code></a></dd>
+</dl>
+<dl>
+<dt>Default:</dt>
+<dd>{}</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+<ul class=blockList>
+<li class=blockList><a name=consumes-->
+</a>
+<ul class=blockList>
+<li class=blockList>
+<h4>consumes</h4>
+<pre>public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;consumes</pre>
+<div class=block>Narrows the primary mapping by media types that can be consumed by the
+mapped handler. Consists of one or more media types one of which must
+match to the request <code>Content-Type</code> header. Examples:
+<pre class=code> consumes = "text/plain"
+ consumes = {"text/plain", "application/*"}
+ consumes = MediaType.TEXT_PLAIN_VALUE
+ </pre>
+Expressions can be negated by using the "!" operator, as in
+"!text/plain", which matches all requests with a <code>Content-Type</code>
+other than "text/plain".
+<p><b>Supported at the type level as well as at the method level!</b>
+If specified at both levels, the method level consumes condition overrides
+the type level condition.</p></div>
+<dl>
+<dt><span class=seeLabel>See Also:</span></dt>
+<dd><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/http/MediaType.html title="class in org.springframework.http"><code>MediaType</code></a>,
+<a href="https://docs.oracle.com/javaee/7/api/javax/servlet/ServletRequest.html?is-external=true#getContentType--" title="class or interface in javax.servlet"><code>ServletRequest.getContentType()</code></a></dd>
+</dl>
+<dl>
+<dt>Default:</dt>
+<dd>{}</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+<ul class=blockList>
+<li class=blockList><a name=produces-->
+</a>
+<ul class=blockListLast>
+<li class=blockList>
+<h4>produces</h4>
+<pre>public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;produces</pre>
+<div class=block>Narrows the primary mapping by media types that can be produced by the
+mapped handler. Consists of one or more media types one of which must
+be chosen via content negotiation against the "acceptable" media types
+of the request. Typically those are extracted from the <code>"Accept"</code>
+header but may be derived from query parameters, or other. Examples:
+<pre class=code> produces = "text/plain"
+ produces = {"text/plain", "application/*"}
+ produces = MediaType.TEXT_PLAIN_VALUE
+ produces = "text/plain;charset=UTF-8"
+ </pre>
+<p>If a declared media type contains a parameter (e.g. "charset=UTF-8",
+"type=feed", "type=entry") and if a compatible media type from the request
+has that parameter too, then the parameter values must match. Otherwise
+if the media type from the request does not contain the parameter, it is
+assumed the client accepts any value.
+<p>Expressions can be negated by using the "!" operator, as in "!text/plain",
+which matches all requests with a <code>Accept</code> other than "text/plain".
+<p><b>Supported at the type level as well as at the method level!</b>
+If specified at both levels, the method level produces condition overrides
+the type level condition.</p></div>
+<dl>
+<dt><span class=seeLabel>See Also:</span></dt>
+<dd><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/http/MediaType.html title="class in org.springframework.http"><code>MediaType</code></a></dd>
+</dl>
+<dl>
+<dt>Default:</dt>
+<dd>{}</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class=bottomNav><a name=navbar.bottom>
+</a>
+<div class=skipNav><a href=#skip.navbar.bottom title="Skip navigation links">Skip navigation links</a></div>
+<a name=navbar.bottom.firstrow>
+</a>
+<ul class=navList title=Navigation>
+<li><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/overview-summary.html>Overview</a></li>
+<li><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/web/bind/annotation/package-summary.html>Package</a></li>
+<li class=navBarCell1Rev>Class</li>
+<li><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/web/bind/annotation/class-use/RequestMapping.html>Use</a></li>
+<li><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/web/bind/annotation/package-tree.html>Tree</a></li>
+<li><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/deprecated-list.html>Deprecated</a></li>
+<li><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/index-files/index-1.html>Index</a></li>
+<li><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/help-doc.html>Help</a></li>
+</ul>
+<div class=aboutLanguage>Spring Framework</div>
+</div>
+<div class=subNav>
+<ul class=navList>
+<li><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/web/bind/annotation/RequestHeader.html title="annotation in org.springframework.web.bind.annotation"><span class=typeNameLink>Prev&nbsp;Class</span></a></li>
+<li><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/web/bind/annotation/RequestMethod.html title="enum in org.springframework.web.bind.annotation"><span class=typeNameLink>Next&nbsp;Class</span></a></li>
+</ul>
+<ul class=navList>
+<li><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/index.html?org/springframework/web/bind/annotation/RequestMapping.html target=_top>Frames</a></li>
+<li><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/org/springframework/web/bind/annotation/RequestMapping.html target=_top>No&nbsp;Frames</a></li>
+</ul>
+<ul class=navList id=allclasses_navbar_bottom style=display:block>
+<li><a href=https://docs.spring.io/spring-framework/docs/5.2.8.RELEASE/javadoc-api/allclasses-noframe.html>All&nbsp;Classes</a></li>
+</ul>
+<div>
+</div>
+<div>
+<ul class=subNavList>
+<li>Summary:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Required&nbsp;|&nbsp;</li>
+<li><a href=#annotation.type.optional.element.summary>Optional</a></li>
+</ul>
+<ul class=subNavList>
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href=#annotation.type.element.detail>Element</a></li>
+</ul>
+</div>
+<a name=skip.navbar.bottom>
+</a></div>
