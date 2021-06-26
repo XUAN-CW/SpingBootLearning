@@ -55,6 +55,17 @@ spring boot 中，版本非常重要，这里选择的版本是： **2.3.2.RELEA
 
 ##  [DemoApplication.java](demo\src\main\java\com\example\demo\DemoApplication.java) 
 
+```java
+@SpringBootApplication
+public class DemoApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
+
+}
+```
+
 这是spring boot 的启动类。我认为，对于一个新手来说，关于启动类，只需要知道以下几点：
 
 1. 此类是程序的入口
@@ -62,6 +73,18 @@ spring boot 中，版本非常重要，这里选择的版本是： **2.3.2.RELEA
 3. spring boot 包扫描的根路径默认为启动类所在路径。在本例中，`DemoApplication.java` 所在路径为 **src\main\java\com\example\demo\DemoApplication.java** ，则包扫描路径根路径为**src\main\java\com\example\demo** ，也就是说，**src\main\java\com\example\demo** 下的组件会被扫描，从而得以加入容器。如果组件不在包扫描路径下，比如有一组件 A 在 **src\main\java\com\A.java** ，则 A 组件不会加入容器中，A 组件的功能也就不会生效
 
 ##  [HelloWorldController.java](demo\src\main\java\com\example\demo\controller\HelloWorldController.java) 
+
+```java
+@RestController
+public class HelloWorldController {
+
+    @RequestMapping("HelloWorld")
+    public String helloWorld() {
+        return "HelloWorld";
+    }
+
+}
+```
 
 本类编写了一个 HTTP 接口，使其能够接受 HTTP 请求并向访问者返回字符串：
 
