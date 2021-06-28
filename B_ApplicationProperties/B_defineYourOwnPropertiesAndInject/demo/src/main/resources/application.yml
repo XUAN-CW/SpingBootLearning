@@ -1,0 +1,39 @@
+simple:
+  # A1.简单参数
+  simplest: yaml
+  # A2.简单参数 - 参数引用
+  reference:
+    name: yaml
+    description: ${simple.reference.name} is good
+  # A3.简单参数 - 使用随机数
+  random:
+    ## 随机字符串
+    value: yaml_${random.value}
+    ## 随机 int
+    number: ${random.int}
+    ## 随机 long
+    bignumber: ${random.long}
+    ## 10 以内的随机数
+    lessThanTen: ${random.int(10)}
+    ## 10-20 的随机数
+    tenToTwenty: ${random.int[10,20]}
+
+
+list:
+  # B1.自定义 list 参数
+  list1: 1,2,3
+  # B2.自定义 list 参数
+  list2[0]: 4
+  list2[1]: 5
+  list2[2]: 6
+
+
+
+map:
+  # C1.自定义 Map<String, String> 参数
+  map1: "{'key1':'yaml1', 'key2':'yaml2', 'yaml3':'value3'}"
+  # C2.自定义 Map<String, String> 参数
+  map2:
+    key1: yaml4
+    key2: yaml5
+    key3: yaml6
