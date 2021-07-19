@@ -22,6 +22,10 @@ public class SimpleAtValueController {
     @Value("${simple.random.value}")
     String random;
 
+    //这个地方是读取不到的，但以下面这种语法，会给它一个默认值
+    @Value("${inexistence:true}")
+    Boolean inexistence;
+
     @RequestMapping("SimpleAtValue_simplest")
     public String simplest(){
         return simplest;
@@ -35,6 +39,12 @@ public class SimpleAtValueController {
     @RequestMapping("SimpleAtValue_random")
     public String random(){
         return random;
+    }
+
+    //http://localhost:8080/inexistence
+    @RequestMapping("inexistence")
+    public Boolean defaultValue(){
+        return inexistence;
     }
 
 }

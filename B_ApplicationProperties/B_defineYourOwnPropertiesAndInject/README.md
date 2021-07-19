@@ -52,6 +52,14 @@ simple:
     }
 ```
 
+### 默认值
+
+```java
+    //这个地方是读取不到的，但以下面这种语法，会给它一个默认值
+    @Value("${inexistence:true}")
+    Boolean inexistence;
+```
+
 ##  [@ConfigurationProperties](assets\references\ConfigurationProperties (Spring Boot 2.3.2.RELEASE API).html) 
 
 在配置文件中定义 properties 并使用  [@ConfigurationProperties](assets\references\ConfigurationProperties (Spring Boot 2.3.2.RELEASE API).html) 批量注入
